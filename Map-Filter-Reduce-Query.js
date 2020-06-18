@@ -77,5 +77,13 @@ let reformattedArray = kvArray.map(obj => {
 //  {key: 3, value: 30}]
 
 -------------------------------------------------------
-    
-    
+Using Filter
+Syntax:
+let newArray = arr.filter(callback(element[, index, [array]])[, thisArg])
+
+
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter(word => word.length > 6);
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+-------------------------------------------------------
