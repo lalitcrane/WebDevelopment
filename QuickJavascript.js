@@ -37,3 +37,45 @@ Create Object using reduce
 myObj = nums.reduce((a,v,) => {'myprop'+i, : v }) ;
 myArray = nums.reduce((a,v,) => ['myprop'+v]) ;
 
+---------------------------------
+  
+  Map Method: Syntax : array.map(function(currentValue, index, arr), thisValue)
+Or 
+let new_array = arr.map(function callback( currentValue[, index[, array]]) {
+    // return element for new_array
+}[, thisArg])
+Example:
+const nums = [4,9,16];
+
+const sqrtnums = nums.map(Math.sqrt) ; // returns [2,3,4]  // Uses External Function
+let newnums = nums.map(x => x * 2 ); // returns [8,18,32]  // Using lambada Function
+
+// On Query Selector
+//  Source - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+let elems = document.querySelectorAll('select option:checked')
+let values = Array.prototype.map.call(elems, function(obj) {
+  return obj.value
+})
+
+// Object Creation Example
+
+let kvArray = [{key: 1, value: 10}, 
+               {key: 2, value: 20}, 
+               {key: 3, value: 30}]
+
+let reformattedArray = kvArray.map(obj => {
+   let rObj = {}
+   rObj[obj.key] = obj.value
+   return rObj
+})
+// reformattedArray is now [{1: 10}, {2: 20}, {3: 30}], 
+
+// kvArray is still: 
+// [{key: 1, value: 10}, 
+//  {key: 2, value: 20}, 
+//  {key: 3, value: 30}]
+
+-------------------------------------------------------
+    
+    
